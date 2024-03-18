@@ -22,7 +22,7 @@ const barnett = {
     foto: './img/wayne-barnett-founder-ceo.jpg'
 }
 const caroll = {
-    nome: 'ANgela Caroll' ,
+    nome: 'Angela Caroll' ,
     ruolo: 'Chief-Editor',
     foto: './img/angela-caroll-chief-editor.jpg'
 }
@@ -63,28 +63,40 @@ const srcImg = [
 
 //  console.log(cardHeaderDOMEl)
 
-const colsHeaderDOMEl = document.querySelectorAll('.col-4')
-console.log(colsHeaderDOMEl)
+const rowElem = document.querySelector('.row');
+// console.log(colsHeaderDOMEl)
 
-for( let j = 0; j < srcImg.length; j++){
-    let imagePath = srcImg[j]
-    // console.log(imagePath)
+for( let j = 0; j < team.length; j++){
+    let membro = team[j]
 
-    const cardheaderHTML = `
-    <div class="card">
-    <div class="card-header">
-    <img src="${imagePath}" alt=""></img>
+    rowElem.innerHTML += `
+    <div class="col-4 mb-4">    
+        <div class="card border-0 text-center">
+            <div class="card-header">
+                <img src="${membro.foto}" alt="">
+            </div>
+            <div class="card-body d-flex flex-column ">
+            <div class="font-weight-bold" >
+                ${membro.nome}
+            </div>
+            <div class="font-italic">
+                ${membro.ruolo}
+            </div>
+
+
+            </div>
+        </div>
     </div>
-    <div class="card-body">
-    </div>
-    </div>`;
+    `;
     
+    /*
     for( let i = 0; i < colsHeaderDOMEl.length; i++){
         singlecol = colsHeaderDOMEl[i]
 
 
-        singlecol.innerHTML += cardheaderHTML
+        singlecol.innerHTML = cardheaderHTML
     }
+    */
     
     
 }

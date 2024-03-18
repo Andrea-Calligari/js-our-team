@@ -6,3 +6,7 @@
 img{
     max-width: 100%;
 }
+body{
+    background: rgb(220,170,92);
+    background: radial-gradient(circle, rgba(220,170,92,1) 37%, rgba(250,247,215,1) 63%);;
+}
