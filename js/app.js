@@ -72,7 +72,7 @@ for( let j = 0; j < team.length; j++){
     rowElem.innerHTML += `
     <div class="col-4 mb-4">    
         <div class="card border-0 text-center">
-            <div class="card-header">
+            <div class="card-header p-0">
                 <img src="${membro.foto}" alt="">
             </div>
             <div class="card-body d-flex flex-column ">
